@@ -6,7 +6,9 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="374e284b-c12a-4478-8bfd-4345adf98098" name="Default Changelist" comment="" />
+    <list default="true" id="374e284b-c12a-4478-8bfd-4345adf98098" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/thanhnv/servlets/CrawlServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/thanhnv/servlets/CrawlServlet.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -59,12 +61,47 @@
       <usages-collector id="statistics.lifecycle.project">
         <counts>
           <entry key="project.closed" value="1" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="iml" value="1" />
+          <entry key="java" value="1" />
+          <entry key="jsp" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="IDEA_MODULE" value="1" />
+          <entry key="JAVA" value="1" />
+          <entry key="JSP" value="1" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/index.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="9" column="8" lean-forward="true" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/thanhnv/servlets/CrawlServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="351">
+              <caret line="26" column="32" lean-forward="true" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -73,6 +110,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
     <option name="projectSyncType">
@@ -121,7 +161,7 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-7" />
     <option name="y" value="15" />
     <option name="width" value="1128" />
@@ -132,87 +172,61 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="FabricMaterialEvaluation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FabricMaterialEvaluation" type="462c0819:PsiDirectoryNode" />
+              <item name="FabricEvaluation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FabricEvaluation" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="FabricMaterialEvaluation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FabricMaterialEvaluation" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FabricMaterialEvaluation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FabricMaterialEvaluation" type="462c0819:PsiDirectoryNode" />
+              <item name="FabricEvaluation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FabricEvaluation" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="FabricMaterialEvaluation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FabricMaterialEvaluation" type="462c0819:PsiDirectoryNode" />
+              <item name="FabricEvaluation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FabricEvaluation" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="thanhnv" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="FabricMaterialEvaluation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FabricMaterialEvaluation" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="thanhnv" type="462c0819:PsiDirectoryNode" />
-              <item name="constants" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FabricMaterialEvaluation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FabricMaterialEvaluation" type="462c0819:PsiDirectoryNode" />
+              <item name="FabricEvaluation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FabricEvaluation" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="thanhnv" type="462c0819:PsiDirectoryNode" />
               <item name="crawlers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="FabricMaterialEvaluation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FabricMaterialEvaluation" type="462c0819:PsiDirectoryNode" />
+              <item name="FabricEvaluation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FabricEvaluation" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="thanhnv" type="462c0819:PsiDirectoryNode" />
               <item name="servlets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="FabricMaterialEvaluation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FabricMaterialEvaluation" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="thanhnv" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FabricMaterialEvaluation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FabricMaterialEvaluation" type="462c0819:PsiDirectoryNode" />
+              <item name="FabricEvaluation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FabricEvaluation" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="FabricMaterialEvaluation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FabricMaterialEvaluation" type="462c0819:PsiDirectoryNode" />
+              <item name="FabricEvaluation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FabricEvaluation" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FabricMaterialEvaluation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FabricMaterialEvaluation" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="outbla" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1583847662234" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1583850673710" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -289,16 +303,17 @@
       <updated>1583339123420</updated>
       <workItem from="1583339128858" duration="1248000" />
       <workItem from="1583472969202" duration="13367000" />
+      <workItem from="1583850422685" duration="251000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14627000" />
+    <option name="totallyTimeSpent" value="14878000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4992948" visible="true" weight="0.1652452" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4992948" visible="true" weight="0.16684435" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -308,7 +323,7 @@
       <window_info id="Web" order="7" sideWeight="0.50070524" side_tool="true" weight="0.16364606" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.37744033" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.37744033" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -339,13 +354,6 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/StringHelper.java" />
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="10" column="26" lean-forward="true" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/thanhnv/utils/constants.java" />
     <entry file="file://$PROJECT_DIR$/src/thanhnv/resolver/URIResolverFU.java" />
     <entry file="file://$PROJECT_DIR$/src/thanhnv/utils/StringHelper.java">
@@ -459,10 +467,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/FabricEvaluation.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="9" column="8" lean-forward="true" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/thanhnv/servlets/CrawlServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="501">
-          <caret line="32" column="44" lean-forward="true" selection-start-line="32" selection-start-column="44" selection-end-line="32" selection-end-column="44" />
+        <state relative-caret-position="351">
+          <caret line="26" column="32" lean-forward="true" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
         </state>
       </provider>
     </entry>
