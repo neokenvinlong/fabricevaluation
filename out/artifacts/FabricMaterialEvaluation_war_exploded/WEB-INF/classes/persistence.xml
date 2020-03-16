@@ -3,6 +3,7 @@
     <persistence-unit name="FabricEvaluationPU" transaction-type="RESOURCE_LOCAL">
         <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
         <class>thanhnv.entities.ProductEntity</class>
+        <class>thanhnv.entities.MaterialEntity</class>
 
         <exclude-unlisted-classes>false</exclude-unlisted-classes>
         <properties>
@@ -10,6 +11,8 @@
             <property name="javax.persistence.jdbc.user" value="sa"/>
             <property name="javax.persistence.jdbc.driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
             <property name="javax.persistence.jdbc.password" value="748159263"/>
+            <property name="eclipselink.jdbc.url" value="jdbc:sqlserver://localhost;database=FabricEvaluation"/>
+            <property name="eclipselink.jdbc.driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
         </properties>
     </persistence-unit>
 </persistence>

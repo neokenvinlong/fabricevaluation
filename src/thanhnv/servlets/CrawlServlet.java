@@ -13,11 +13,12 @@ public class CrawlServlet extends HttpServlet {
     @Override
     public void init() throws ServletException {
         String realPath = this.getServletContext().getRealPath("/");
-        PageCrawler categoryCrawler = new CategoryCrawler("https://www.uniqlo.com",realPath);
-        TaskCrawler taskCrawler = new TaskCrawler("UNICATE",categoryCrawler);
+//        PageCrawler categoryCrawler = new CategoryCrawler("https://www.uniqlo.com",realPath);
+//        TaskCrawler taskCrawler = new TaskCrawler("UNICATE",categoryCrawler);
+//        taskCrawler.run();
+        PageCrawler materialCrawler = new MaterialCrawler("https://dressmann.com/en/corporate-en/product-info/guide-to-material---fiber-quality/?fbclid=IwAR1lAfKRq39lvXeAufha76hcueF77A7DMjYVRJ6r4HhwFPj61enZtVHMLxc",realPath);
+        TaskCrawler taskCrawler = new TaskCrawler("UNICATE",materialCrawler);
         taskCrawler.run();
-
-
 
 //        PageCrawler outBlaCrawler = new OutBlaCrawler("https://www.uniqlo.com/us/en/men/outerwear-and-blazers", realPath);
 //        TaskCrawler taskCrawlerOutBla = new TaskCrawler("OUTBLA", outBlaCrawler);

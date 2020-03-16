@@ -80,11 +80,11 @@ public class PageCrawler {
     }
 
     public void run(){
-//        System.out.println("Method not implementation at " + this.url);
-//        try {
-////            System.out.println(this.crawl().toString());
-//        }catch(Exception e){
-//            e.printStackTrace();
-//        }
+        System.out.println("Method not implementation at " + this.url);
+        try {
+            System.out.println(this.crawl().toString());
+        }catch(Exception e){
+            e.printStackTrace();
+        }
     }
 }
