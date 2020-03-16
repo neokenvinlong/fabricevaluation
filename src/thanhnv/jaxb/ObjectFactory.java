@@ -24,7 +24,7 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _Product_QNAME = new QName("https://www.uniqlo.com", "product");
+    private final static QName _Materials_QNAME = new QName("https://dressmann.com", "materials");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: thanhnv.jaxb
@@ -34,28 +34,28 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Product }
+     * Create an instance of {@link Materials }
      * 
      */
-    public Product createProduct() {
-        return new Product();
+    public Materials createMaterials() {
+        return new Materials();
     }
 
     /**
-     * Create an instance of {@link Sizes }
+     * Create an instance of {@link Material }
      * 
      */
-    public Sizes createSizes() {
-        return new Sizes();
+    public Material createMaterial() {
+        return new Material();
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Product }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link Materials }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "https://www.uniqlo.com", name = "product")
-    public JAXBElement<Product> createProduct(Product value) {
-        return new JAXBElement<Product>(_Product_QNAME, Product.class, null, value);
+    @XmlElementDecl(namespace = "https://dressmann.com", name = "materials")
+    public JAXBElement<Materials> createMaterials(Materials value) {
+        return new JAXBElement<Materials>(_Materials_QNAME, Materials.class, null, value);
     }
 
 }

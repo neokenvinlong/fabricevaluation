@@ -16,4 +16,7 @@ public class StaticURL {
 
     public static final String PERSISTENT_UNIT = "FabricEvaluationPU";
 
+    public static final String XSL_MATERIAL = "/WEB-INF/dressman/material.xsl";
+    public static final String SCHEMA_MATERIAL = "/WEB-INF/dressman/material.xsd";
+
 }

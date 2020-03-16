@@ -7,80 +7,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="374e284b-c12a-4478-8bfd-4345adf98098" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/JPA_1_0_JPA_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/org_eclipse_persistence_org_eclipse_persistence_jpa_2_7_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sqljdbc42.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/META-INF/persistence.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/thanhnv/crawlers/MaterialCrawler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/thanhnv/crawlers/ProductCategoryCrawler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/thanhnv/crawlers/ProductDetailCrawler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/thanhnv/entities/ProductEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/thanhnv/repository/ProductRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/thanhnv/utils/HashUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/thanhnv/utils/JAXBUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/uniqlo/category.xsd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/uniqlo/product.xsd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/FabricMaterialEvaluation_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/FabricMaterialEvaluation_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/thanhnv/entities/MaterialEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/thanhnv/repository/MaterialRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/dressman/material.xsd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/dressman/material.xsl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/test.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/60edac9e-c454-42eb-8f2e-f52fbadacea6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/60edac9e-c454-42eb-8f2e-f52fbadacea6.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/60edac9e-c454-42eb-8f2e-f52fbadacea6/storage_v2/_src_/database/FabricEvaluation.4dmRzQ/schema/dbo.sYMBAA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/60edac9e-c454-42eb-8f2e-f52fbadacea6/storage_v2/_src_/database/FabricEvaluation.4dmRzQ/schema/dbo.sYMBAA.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FabricEvaluation.iml" beforeDir="false" afterPath="$PROJECT_DIR$/FabricEvaluation.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FabricMaterialEvaluation_war_exploded/WEB-INF/casual/casual.xsl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FabricMaterialEvaluation_war_exploded/WEB-INF/classes/thanhnv/constants/GlobalURL.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FabricMaterialEvaluation_war_exploded/WEB-INF/classes/thanhnv/crawlers/CasualCrawler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FabricMaterialEvaluation_war_exploded/WEB-INF/classes/thanhnv/crawlers/CategoryCrawler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FabricMaterialEvaluation_war_exploded/WEB-INF/classes/thanhnv/crawlers/CategoryCrawler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FabricMaterialEvaluation_war_exploded/WEB-INF/classes/thanhnv/crawlers/OutBlaCrawler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FabricMaterialEvaluation_war_exploded/WEB-INF/classes/thanhnv/constants/StaticURL.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FabricMaterialEvaluation_war_exploded/WEB-INF/classes/thanhnv/constants/StaticURL.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/FabricMaterialEvaluation_war_exploded/WEB-INF/classes/thanhnv/crawlers/PageCrawler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FabricMaterialEvaluation_war_exploded/WEB-INF/classes/thanhnv/crawlers/PageCrawler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FabricMaterialEvaluation_war_exploded/WEB-INF/classes/thanhnv/crawlers/SwSwCrawler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FabricMaterialEvaluation_war_exploded/WEB-INF/classes/thanhnv/crawlers/SweCrawler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FabricMaterialEvaluation_war_exploded/WEB-INF/classes/thanhnv/crawlers/ProductDetailCrawler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FabricMaterialEvaluation_war_exploded/WEB-INF/classes/thanhnv/crawlers/ProductDetailCrawler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FabricMaterialEvaluation_war_exploded/WEB-INF/classes/thanhnv/jaxb/ObjectFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FabricMaterialEvaluation_war_exploded/WEB-INF/classes/thanhnv/jaxb/ObjectFactory.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/FabricMaterialEvaluation_war_exploded/WEB-INF/classes/thanhnv/servlets/CrawlServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FabricMaterialEvaluation_war_exploded/WEB-INF/classes/thanhnv/servlets/CrawlServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FabricMaterialEvaluation_war_exploded/WEB-INF/classes/thanhnv/utils/CrawlHelper$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FabricMaterialEvaluation_war_exploded/WEB-INF/classes/thanhnv/utils/CrawlHelper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FabricMaterialEvaluation_war_exploded/WEB-INF/classes/thanhnv/utils/HttpHelper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FabricMaterialEvaluation_war_exploded/WEB-INF/classes/thanhnv/utils/StringHelper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FabricMaterialEvaluation_war_exploded/WEB-INF/outbla/outbla.xsl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FabricMaterialEvaluation_war_exploded/WEB-INF/swe/swe.xsl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FabricMaterialEvaluation_war_exploded/WEB-INF/swsw/swsw.xsl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FabricEvaluation/thanhnv/constants/GlobalURL.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FabricEvaluation/thanhnv/crawlers/CasualCrawler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FabricEvaluation/thanhnv/crawlers/CategoryCrawler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FabricEvaluation/thanhnv/crawlers/CategoryCrawler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FabricEvaluation/thanhnv/crawlers/OutBlaCrawler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FabricMaterialEvaluation_war_exploded/WEB-INF/classes/thanhnv/utils/HashUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FabricMaterialEvaluation_war_exploded/WEB-INF/classes/thanhnv/utils/HashUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FabricEvaluation/thanhnv/constants/StaticURL.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FabricEvaluation/thanhnv/constants/StaticURL.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/FabricEvaluation/thanhnv/crawlers/PageCrawler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FabricEvaluation/thanhnv/crawlers/PageCrawler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FabricEvaluation/thanhnv/crawlers/SwSwCrawler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FabricEvaluation/thanhnv/crawlers/SweCrawler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FabricEvaluation/thanhnv/crawlers/ProductDetailCrawler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FabricEvaluation/thanhnv/crawlers/ProductDetailCrawler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FabricEvaluation/thanhnv/jaxb/ObjectFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FabricEvaluation/thanhnv/jaxb/ObjectFactory.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/FabricEvaluation/thanhnv/servlets/CrawlServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FabricEvaluation/thanhnv/servlets/CrawlServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FabricEvaluation/thanhnv/utils/CrawlHelper$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FabricEvaluation/thanhnv/utils/CrawlHelper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FabricEvaluation/thanhnv/utils/HttpHelper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FabricEvaluation/thanhnv/utils/StringHelper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FabricMaterialEvaluation/thanhnv/constants/EntityCharacter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FabricMaterialEvaluation/thanhnv/constants/GlobalURL.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FabricMaterialEvaluation/thanhnv/constants/State.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FabricMaterialEvaluation/thanhnv/crawlers/OutBlaCrawler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FabricMaterialEvaluation/thanhnv/crawlers/PageCrawler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FabricMaterialEvaluation/thanhnv/crawlers/SwSwCrawler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FabricMaterialEvaluation/thanhnv/crawlers/SweCrawler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FabricMaterialEvaluation/thanhnv/crawlers/TaskCrawler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FabricMaterialEvaluation/thanhnv/servlets/CrawlServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FabricMaterialEvaluation/thanhnv/utils/CrawlHelper$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FabricMaterialEvaluation/thanhnv/utils/CrawlHelper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FabricMaterialEvaluation/thanhnv/utils/HttpHelper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FabricMaterialEvaluation/thanhnv/utils/StringHelper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/thanhnv/constants/GlobalURL.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/thanhnv/crawlers/CasualCrawler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/thanhnv/crawlers/CategoryCrawler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/thanhnv/crawlers/CategoryCrawler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/thanhnv/crawlers/OutBlaCrawler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FabricEvaluation/thanhnv/utils/HashUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FabricEvaluation/thanhnv/utils/HashUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/thanhnv/constants/StaticURL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/thanhnv/constants/StaticURL.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/thanhnv/crawlers/MaterialCrawler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/thanhnv/crawlers/MaterialCrawler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/thanhnv/crawlers/PageCrawler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/thanhnv/crawlers/PageCrawler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/thanhnv/crawlers/SwSwCrawler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/thanhnv/crawlers/SweCrawler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/thanhnv/jaxb/ObjectFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/thanhnv/jaxb/ObjectFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/thanhnv/servlets/CrawlServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/thanhnv/servlets/CrawlServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/thanhnv/utils/CrawlHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/thanhnv/utils/CrawlUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/thanhnv/utils/HttpHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/thanhnv/utils/HttpUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/thanhnv/utils/StringHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/thanhnv/utils/StringUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/casual/casual.xsl" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/uniqlo/category.xsl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/outbla/outbla.xsl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/swe/swe.xsl" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/uniqlo/product.xsl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/swsw/swsw.xsl" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/uniqlo/productcategory.xsl" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -163,40 +115,41 @@
         <counts>
           <entry key="class" value="3" />
           <entry key="iml" value="1" />
-          <entry key="java" value="66" />
+          <entry key="java" value="90" />
           <entry key="jsp" value="1" />
           <entry key="sql" value="1" />
-          <entry key="xml" value="11" />
-          <entry key="xsd" value="10" />
-          <entry key="xsl" value="8" />
+          <entry key="xml" value="12" />
+          <entry key="xsd" value="14" />
+          <entry key="xsl" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="3" />
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="66" />
+          <entry key="JAVA" value="90" />
           <entry key="JSP" value="1" />
           <entry key="Scratch" value="1" />
-          <entry key="XML" value="29" />
+          <entry key="XML" value="38" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="40" />
-          <entry key="java" value="2795" />
+          <entry key="java" value="3256" />
           <entry key="txt" value="34" />
           <entry key="xml" value="47" />
-          <entry key="xsd" value="342" />
-          <entry key="xsl" value="1057" />
+          <entry key="xpath" value="4" />
+          <entry key="xsd" value="424" />
+          <entry key="xsl" value="1282" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="2795" />
+          <entry key="JAVA" value="3256" />
           <entry key="PLAIN_TEXT" value="74" />
-          <entry key="XML" value="1441" />
-          <entry key="XPath" value="5" />
+          <entry key="XML" value="1748" />
+          <entry key="XPath" value="9" />
         </counts>
       </usages-collector>
     </session>
@@ -204,10 +157,55 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/thanhnv/utils/JAXBUtil.java">
+        <entry file="file://$PROJECT_DIR$/src/thanhnv/constants/StaticURL.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+            <state relative-caret-position="450">
+              <caret line="18" column="79" lean-forward="true" selection-start-line="18" selection-start-column="79" selection-end-line="18" selection-end-column="79" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/dressman/material.xsd">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="125">
+              <caret line="6" column="19" lean-forward="true" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/thanhnv/jaxb/Categories.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="350">
+              <caret line="31" selection-start-line="31" selection-end-line="31" selection-end-column="73" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/dressman/material.xsl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/thanhnv/servlets/CrawlServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="297">
+              <caret line="23" column="42" selection-start-line="23" selection-start-column="42" selection-end-line="23" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/thanhnv/crawlers/MaterialCrawler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="325">
+              <caret line="38" column="62" selection-start-line="38" selection-start-column="62" selection-end-line="38" selection-end-column="62" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -216,10 +214,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/thanhnv/utils/HashUtil.java">
+        <entry file="file://$PROJECT_DIR$/src/thanhnv/repository/MaterialRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="28" column="55" selection-start-line="28" selection-start-column="55" selection-end-line="28" selection-end-column="55" />
+            <state relative-caret-position="125">
+              <caret line="14" column="56" lean-forward="true" selection-start-line="14" selection-start-column="56" selection-end-line="14" selection-end-column="56" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -228,10 +226,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/thanhnv/entities/ProductEntity.java">
+        <entry file="file://$PROJECT_DIR$/src/thanhnv/repository/ProductRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="93" column="55" selection-start-line="93" selection-start-column="55" selection-end-line="93" selection-end-column="55" />
+            <state relative-caret-position="290">
+              <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -239,7 +240,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/thanhnv/crawlers/ProductDetailCrawler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
+            <state relative-caret-position="425">
               <caret line="44" column="38" lean-forward="true" selection-start-line="44" selection-start-column="38" selection-end-line="44" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -248,23 +249,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/thanhnv/crawlers/MaterialCrawler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="50">
-              <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/thanhnv/crawlers/ProductCategoryCrawler.java">
+        <entry file="file://$PROJECT_DIR$/src/thanhnv/crawlers/PageCrawler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="26" column="79" selection-start-line="26" selection-start-column="67" selection-end-line="26" selection-end-column="79" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="200">
+              <caret line="65" column="48" lean-forward="true" selection-start-line="65" selection-start-column="48" selection-end-line="65" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -289,6 +278,7 @@
       <find>&lt;sizes/&gt;</find>
       <find>427315COL00SMA001000</find>
       <find>426865COL09SMA001000</find>
+      <find>&lt;material&gt;</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -322,7 +312,6 @@
         <option value="$PROJECT_DIR$/src/thanhnv/crawlers/SwSwCrawler.java" />
         <option value="$PROJECT_DIR$/src/thanhnv/crawlers/CasualCrawler.java" />
         <option value="$PROJECT_DIR$/src/thanhnv/constants/GlobalURL.java" />
-        <option value="$PROJECT_DIR$/src/thanhnv/servlets/CrawlServlet.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/uniqlo/category.xsl" />
         <option value="$PROJECT_DIR$/web/WEB-INF/uniqlo/category.xsd" />
         <option value="$PROJECT_DIR$/src/thanhnv/jaxb/Category.java" />
@@ -333,19 +322,28 @@
         <option value="$PROJECT_DIR$/out/artifacts/FabricMaterialEvaluation_war_exploded/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/thanhnv/utils/JAXBUtil.java" />
         <option value="$PROJECT_DIR$/src/thanhnv/crawlers/CategoryCrawler.java" />
-        <option value="$PROJECT_DIR$/src/thanhnv/crawlers/PageCrawler.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/uniqlo/product.xsl" />
         <option value="$PROJECT_DIR$/src/thanhnv/jaxb/product.xsd" />
         <option value="$PROJECT_DIR$/web/WEB-INF/uniqlo/product.xsd" />
         <option value="$PROJECT_DIR$/src/thanhnv/jaxb/schema1.xsd" />
         <option value="$PROJECT_DIR$/src/thanhnv/jaxb/Product.java" />
         <option value="$PROJECT_DIR$/src/thanhnv/repository/ProductRepository.java" />
-        <option value="$PROJECT_DIR$/src/thanhnv/constants/StaticURL.java" />
         <option value="$PROJECT_DIR$/META-INF/persistence.xml" />
         <option value="$PROJECT_DIR$/src/thanhnv/entities/ProductEntity.java" />
         <option value="$PROJECT_DIR$/src/thanhnv/crawlers/ProductCategoryCrawler.java" />
         <option value="$PROJECT_DIR$/src/thanhnv/utils/HashUtil.java" />
         <option value="$PROJECT_DIR$/src/thanhnv/crawlers/ProductDetailCrawler.java" />
+        <option value="$PROJECT_DIR$/src/thanhnv/jaxb/material.xsd" />
+        <option value="$PROJECT_DIR$/src/thanhnv/jaxb/Material.java" />
+        <option value="$PROJECT_DIR$/src/thanhnv/constants/StaticURL.java" />
+        <option value="$PROJECT_DIR$/src/thanhnv/servlets/CrawlServlet.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/test.xml" />
+        <option value="$PROJECT_DIR$/src/thanhnv/crawlers/PageCrawler.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/dressman/material.xsd" />
+        <option value="$PROJECT_DIR$/src/thanhnv/jaxb/Materials.java" />
+        <option value="$PROJECT_DIR$/src/thanhnv/repository/MaterialRepository.java" />
+        <option value="$PROJECT_DIR$/src/thanhnv/crawlers/MaterialCrawler.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/dressman/material.xsl" />
       </list>
     </option>
   </component>
@@ -365,7 +363,7 @@
   <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-16" />
     <option name="y" value="2" />
-    <option name="width" value="1493" />
+    <option name="width" value="1006" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectView">
@@ -385,85 +383,6 @@
               <item name="FabricEvaluation" type="b2602c69:ProjectViewProjectNode" />
               <item name="FabricEvaluation" type="462c0819:PsiDirectoryNode" />
               <item name="META-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FabricEvaluation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FabricEvaluation" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FabricEvaluation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FabricEvaluation" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FabricEvaluation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FabricEvaluation" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
-              <item name="FabricMaterialEvaluation_war_exploded" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FabricEvaluation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FabricEvaluation" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
-              <item name="FabricMaterialEvaluation_war_exploded" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FabricEvaluation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FabricEvaluation" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
-              <item name="FabricMaterialEvaluation_war_exploded" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FabricEvaluation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FabricEvaluation" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
-              <item name="FabricMaterialEvaluation_war_exploded" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
-              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FabricEvaluation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FabricEvaluation" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
-              <item name="FabricMaterialEvaluation_war_exploded" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
-              <item name="thanhnv" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FabricEvaluation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FabricEvaluation" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
-              <item name="FabricMaterialEvaluation_war_exploded" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FabricEvaluation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FabricEvaluation" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
-              <item name="FabricMaterialEvaluation_war_exploded" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="uniqlo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FabricEvaluation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FabricEvaluation" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="production" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="FabricEvaluation" type="b2602c69:ProjectViewProjectNode" />
@@ -536,6 +455,20 @@
               <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="FabricEvaluation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FabricEvaluation" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="dressman" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FabricEvaluation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FabricEvaluation" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="uniqlo" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -551,7 +484,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1584368464385" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1584383386249" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/sqljdbc42.jar!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -563,8 +496,8 @@
   </component>
   <component name="RecentsManager">
     <key name="ImportMappingsDialog.RecentPackages">
-      <recent name="" />
       <recent name="thanhnv.entities" />
+      <recent name="" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="thanhnv.utils" />
@@ -585,7 +518,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.HashUtil">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 8.0.27">
     <configuration name="HashUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="thanhnv.utils.HashUtil" />
       <module name="FabricEvaluation" />
@@ -662,29 +595,29 @@
       <workItem from="1583850422685" duration="23880000" />
       <workItem from="1583991196453" duration="17548000" />
       <workItem from="1584255647955" duration="16191000" />
-      <workItem from="1584272055545" duration="12735000" />
+      <workItem from="1584272055545" duration="22088000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="84981000" />
+    <option name="totallyTimeSpent" value="94334000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info id="Persistence" sideWeight="0.2826087" side_tool="true" visible="true" weight="0.17004265" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7173913" visible="true" weight="0.17004265" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info id="Capture Tool" order="6" />
-      <window_info id="Web" order="7" sideWeight="0.50070524" side_tool="true" weight="0.16364606" />
+      <window_info id="Persistence" order="0" sideWeight="0.38833332" side_tool="true" visible="true" weight="0.22228146" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.6116667" visible="true" weight="0.22228146" />
+      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="3" />
+      <window_info id="Image Layers" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Capture Tool" order="7" />
+      <window_info id="Web" order="8" sideWeight="0.50070524" side_tool="true" weight="0.16364606" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.27657267" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.2516269" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.34924078" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -702,43 +635,10 @@
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="right" id="Maven Projects" order="5" />
-      <window_info anchor="right" id="Database" order="6" weight="0.10021322" />
+      <window_info anchor="right" id="Database" order="6" weight="0.1716418" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
     </layout>
-    <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4992948" visible="true" weight="0.1684435" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info id="Capture Tool" order="6" />
-      <window_info id="Web" order="7" sideWeight="0.50070524" side_tool="true" weight="0.16364606" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.27657267" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.36550975" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Application Servers" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.329718" />
-      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="12" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.329718" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Maven Projects" order="5" />
-      <window_info anchor="right" id="Database" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Theme Preview" order="8" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -749,45 +649,20 @@
   <component name="XPathView.XPathProjectComponent">
     <history>
       <element expression="//ul[contains(@class,'leftsection')]/li/a" />
+      <element expression="//div[@class='sizeguide text']/div/div/table/tbody/tr[position() &gt;1]" />
+      <element expression="//div[@class='sizeguide text']" />
+      <element expression="//div[@class='sizeguide text']/div" />
+      <element expression="//div[@class='sizeguide text']/table/tbody/tr[position() &gt;1]" />
     </history>
     <find-history />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="8" column="44" lean-forward="true" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/swe/swe.xsl" />
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/swsw/swsw.xsl" />
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/casual/casual.xsl" />
-    <entry file="file://$PROJECT_DIR$/src/thanhnv/crawlers/SweCrawler.java" />
-    <entry file="file://$PROJECT_DIR$/src/thanhnv/crawlers/SwSwCrawler.java" />
-    <entry file="file://$PROJECT_DIR$/FabricEvaluation.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" column="8" lean-forward="true" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/thanhnv/crawlers/OutBlaCrawler.java" />
     <entry file="file://$PROJECT_DIR$/src/thanhnv/crawlers/CasualCrawler.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/jre/lib/rt.jar!/javax/xml/bind/ValidationEventHandler.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
           <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/uniqlo/category.xsd">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
@@ -806,55 +681,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/thanhnv/jaxb/ObjectFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/uniqlo/productcategory.xsl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="50">
           <caret line="2" column="43" selection-start-line="2" selection-start-column="43" selection-end-line="2" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/uniqlo/category.xsl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/thanhnv/servlets/CrawlServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="16" column="50" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/thanhnv/crawlers/CategoryCrawler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="21" column="15" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/thanhnv/crawlers/TaskCrawler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="436">
-          <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/thanhnv/crawlers/PageCrawler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="929">
-          <caret line="87" column="11" selection-start-line="87" selection-start-column="11" selection-end-line="87" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -889,20 +719,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/thanhnv/jaxb/Product.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="41" column="26" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/thanhnv/jaxb/Category.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="38" column="51" selection-start-line="38" selection-start-column="51" selection-end-line="38" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/60edac9e-c454-42eb-8f2e-f52fbadacea6/console.sql">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -911,13 +727,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/dataSources.local.xml">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/thanhnv/jaxb/Categories.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="31" column="64" selection-start-line="31" selection-start-column="64" selection-end-line="31" selection-end-column="64" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/out/artifacts/FabricMaterialEvaluation_war_exploded/WEB-INF/classes/persistence.xml">
       <provider selected="true" editor-type-id="text-editor" />
@@ -929,27 +738,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/thanhnv/constants/StaticURL.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="16" column="68" selection-start-line="16" selection-start-column="68" selection-end-line="16" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/lib/javaee.jar!/javax/persistence/Persistence.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="148">
           <caret line="54" selection-start-line="54" selection-end-line="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/thanhnv/repository/ProductRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="33" column="62" selection-start-line="33" selection-start-column="62" selection-end-line="33" selection-end-column="62" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -998,16 +790,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/thanhnv/crawlers/ProductCategoryCrawler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="26" column="79" selection-start-line="26" selection-start-column="67" selection-end-line="26" selection-end-column="79" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/thanhnv/utils/CrawlUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-25">
@@ -1022,16 +804,85 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/uniqlo/category.xsd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/thanhnv/entities/ProductEntity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
+        <state relative-caret-position="-16">
           <caret line="93" column="55" selection-start-line="93" selection-start-column="55" selection-end-line="93" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/thanhnv/jaxb/ObjectFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-195">
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/thanhnv/jaxb/Material.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/thanhnv/jaxb/Category.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="38" column="51" selection-start-line="38" selection-start-column="51" selection-end-line="38" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/thanhnv/jaxb/Product.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="41" selection-start-line="41" selection-end-line="41" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/uniqlo/category.xsl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="108" lean-forward="true" selection-start-column="108" selection-end-column="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/thanhnv/crawlers/TaskCrawler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/thanhnv/crawlers/CategoryCrawler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="17" column="100" lean-forward="true" selection-start-line="17" selection-start-column="100" selection-end-line="17" selection-end-column="144" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/thanhnv/crawlers/ProductCategoryCrawler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-56">
+          <caret line="13" column="67" lean-forward="true" selection-start-line="13" selection-start-column="67" selection-end-line="14" selection-end-column="73" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/thanhnv/utils/HashUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
+        <state relative-caret-position="390">
           <caret line="28" column="55" selection-start-line="28" selection-start-column="55" selection-end-line="28" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1039,10 +890,121 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/thanhnv/crawlers/ProductDetailCrawler.java">
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/test.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="2506" column="28" lean-forward="true" selection-start-line="2506" selection-start-column="28" selection-end-line="2506" selection-end-column="28" />
+          <folding>
+            <element signature="e#2763#2768#0" expanded="true" />
+            <element signature="e#3221#3226#0" expanded="true" />
+            <element signature="e#3484#3489#0" expanded="true" />
+            <element signature="e#4013#4018#0" expanded="true" />
+            <element signature="e#13055#13060#0" expanded="true" />
+            <element signature="e#15470#15475#0" expanded="true" />
+            <element signature="e#15657#15662#0" expanded="true" />
+            <element signature="e#15853#15858#0" expanded="true" />
+            <element signature="e#18797#18802#0" expanded="true" />
+            <element signature="e#25356#25361#0" expanded="true" />
+            <element signature="e#25542#25547#0" expanded="true" />
+            <element signature="e#26007#26012#0" expanded="true" />
+            <element signature="e#32145#32150#0" expanded="true" />
+            <element signature="e#32754#32759#0" expanded="true" />
+            <element signature="e#33093#33098#0" expanded="true" />
+            <element signature="e#33296#33301#0" expanded="true" />
+            <element signature="e#33707#33712#0" expanded="true" />
+            <element signature="e#42957#42962#0" expanded="true" />
+            <element signature="e#45372#45377#0" expanded="true" />
+            <element signature="e#45559#45564#0" expanded="true" />
+            <element signature="e#45755#45760#0" expanded="true" />
+            <element signature="e#48699#48704#0" expanded="true" />
+            <element signature="e#55258#55263#0" expanded="true" />
+            <element signature="e#55444#55449#0" expanded="true" />
+            <element signature="e#55909#55914#0" expanded="true" />
+            <element signature="e#62047#62052#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/thanhnv/constants/StaticURL.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="18" column="79" lean-forward="true" selection-start-line="18" selection-start-column="79" selection-end-line="18" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/thanhnv/servlets/CrawlServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="23" column="42" selection-start-line="23" selection-start-column="42" selection-end-line="23" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/thanhnv/jaxb/Categories.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="350">
+          <caret line="31" selection-start-line="31" selection-end-line="31" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/thanhnv/jaxb/Materials.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="31" column="69" selection-start-line="31" selection-start-column="69" selection-end-line="31" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/thanhnv/jaxb/material.xsd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="95" lean-forward="true" selection-start-line="2" selection-start-column="95" selection-end-line="2" selection-end-column="116" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/dressman/material.xsd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="6" column="19" lean-forward="true" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/thanhnv/crawlers/PageCrawler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="65" column="48" lean-forward="true" selection-start-line="65" selection-start-column="48" selection-end-line="65" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/thanhnv/entities/MaterialEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="17" column="7" lean-forward="true" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/thanhnv/crawlers/ProductDetailCrawler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
           <caret line="44" column="38" lean-forward="true" selection-start-line="44" selection-start-column="38" selection-end-line="44" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/thanhnv/repository/MaterialRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="14" column="56" lean-forward="true" selection-start-line="14" selection-start-column="56" selection-end-line="14" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/thanhnv/repository/ProductRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1051,8 +1013,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/thanhnv/crawlers/MaterialCrawler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
+        <state relative-caret-position="325">
+          <caret line="38" column="62" selection-start-line="38" selection-start-column="62" selection-end-line="38" selection-end-column="62" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/dressman/material.xsl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
         </state>
       </provider>
     </entry>
