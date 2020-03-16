@@ -1,0 +1,20 @@
+<xsd:schema elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="https://www.uniqlo.com"
+            targetNamespace="https://www.uniqlo.com">
+    <xsd:element name="product" type="product"/>
+    <xsd:complexType name="product">
+        <xsd:sequence>
+            <xsd:element name="productid" type="xsd:string"/>
+            <xsd:element name="productname" type="xsd:string"/>
+            <xsd:element name="productimage" type="xsd:string"/>
+            <xsd:element name="price" type="xsd:double"/>
+            <xsd:element name="sizes" type="sizes"/>
+            <xsd:element name="productinfo" type="xsd:string"/>
+            <xsd:element name="material" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="sizes">
+        <xsd:sequence>
+            <xsd:element name="size" type="xsd:string" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>

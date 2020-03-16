@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="FabricEvaluation@localhost" uuid="60edac9e-c454-42eb-8f2e-f52fbadacea6">
+      <database-info product="Microsoft SQL Server" version="12.00.4100" jdbc-version="4.2" driver-name="Microsoft JDBC Driver 7.4 for SQL Server" driver-version="7.4.1.0" family="MSSQL" exact-version="12.0.410">
+        <extra-name-characters>$#@</extra-name-characters>
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>sa</user-name>
+      <introspection-schemas>FabricEvaluation:dbo</introspection-schemas>
+    </data-source>
+  </component>
+</project>

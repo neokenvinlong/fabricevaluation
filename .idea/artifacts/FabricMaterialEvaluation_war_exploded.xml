@@ -6,6 +6,12 @@
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
           <element id="module-output" name="FabricEvaluation" />
+          <element id="jpa-descriptors" facet="FabricEvaluation/jpa/JPA" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="JPA 1.0-JPA 1.0" />
+          <element id="library" level="project" name="org.eclipse.persistence:org.eclipse.persistence.jpa:2.7.6" />
+          <element id="library" level="project" name="sqljdbc42" />
         </element>
       </element>
     </root>

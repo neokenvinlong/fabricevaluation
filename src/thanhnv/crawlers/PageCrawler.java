@@ -1,7 +1,7 @@
 package thanhnv.crawlers;
 
-import thanhnv.utils.CrawlHelper;
-import thanhnv.utils.HttpHelper;
+import thanhnv.utils.CrawlUtil;
+import thanhnv.utils.HttpUtil;
 
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerFactory;
@@ -65,9 +65,9 @@ public class PageCrawler {
         TransformerFactory factory = TransformerFactory.newInstance();
         factory.setURIResolver((href, base) -> {
             try{
-                String content = CrawlHelper.getWellformHTML(HttpHelper.getContent(url));
-                System.out.println("---------------");
-                System.out.println(content);
+                String content = CrawlUtil.getWellformHTML(HttpUtil.getContent(url));
+//                System.out.println("---------------");
+//                System.out.println(content);
                 return new StreamSource(new ByteArrayInputStream(content.getBytes(StandardCharsets.UTF_8)));
             } catch (Exception e){
                 e.printStackTrace();
@@ -80,11 +80,11 @@ public class PageCrawler {
     }
 
     public void run(){
-        System.out.println("Method not implementation at " + this.url);
-        try {
-            System.out.println(this.crawl().toString());
-        }catch(Exception e){
-            e.printStackTrace();
-        }
+//        System.out.println("Method not implementation at " + this.url);
+//        try {
+////            System.out.println(this.crawl().toString());
+//        }catch(Exception e){
+//            e.printStackTrace();
+//        }
     }
 }
