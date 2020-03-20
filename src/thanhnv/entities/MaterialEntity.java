@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
-@Table(name = "material", schema = "dbo", catalog = "FabricEvaluation")
+@Table(name = "Material", schema = "dbo", catalog = "FabricEvaluation")
 public class MaterialEntity {
     private String fiber;
     private String uses;
@@ -16,7 +16,7 @@ public class MaterialEntity {
     private String shrink;
 
     @Id
-    @Column(name = "fiber", nullable = false, length = 200)
+    @Column(name = "fiber", nullable = false, length = 100)
     public String getFiber() {
         return fiber;
     }
@@ -26,7 +26,7 @@ public class MaterialEntity {
     }
 
     @Basic
-    @Column(name = "uses", nullable = true, length = 200)
+    @Column(name = "uses", nullable = true, length = 2147483647)
     public String getUses() {
         return uses;
     }
@@ -36,7 +36,7 @@ public class MaterialEntity {
     }
 
     @Basic
-    @Column(name = "appearance", nullable = true, length = 200)
+    @Column(name = "appearance", nullable = true, length = 2147483647)
     public String getAppearance() {
         return appearance;
     }
@@ -46,7 +46,7 @@ public class MaterialEntity {
     }
 
     @Basic
-    @Column(name = "pros", nullable = true, length = 200)
+    @Column(name = "pros", nullable = true, length = 2147483647)
     public String getPros() {
         return pros;
     }
@@ -56,7 +56,7 @@ public class MaterialEntity {
     }
 
     @Basic
-    @Column(name = "cons", nullable = true, length = 200)
+    @Column(name = "cons", nullable = true, length = 2147483647)
     public String getCons() {
         return cons;
     }
@@ -66,7 +66,7 @@ public class MaterialEntity {
     }
 
     @Basic
-    @Column(name = "carewash", nullable = true, length = 200)
+    @Column(name = "carewash", nullable = true, length = 2147483647)
     public String getCarewash() {
         return carewash;
     }
@@ -76,7 +76,7 @@ public class MaterialEntity {
     }
 
     @Basic
-    @Column(name = "wrinkle", nullable = true, length = 200)
+    @Column(name = "wrinkle", nullable = true, length = 2147483647)
     public String getWrinkle() {
         return wrinkle;
     }
@@ -86,7 +86,7 @@ public class MaterialEntity {
     }
 
     @Basic
-    @Column(name = "shrink", nullable = true, length = 200)
+    @Column(name = "shrink", nullable = true, length = 2147483647)
     public String getShrink() {
         return shrink;
     }

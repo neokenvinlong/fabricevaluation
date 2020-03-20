@@ -12,6 +12,7 @@
           <element id="library" level="project" name="JPA 1.0-JPA 1.0" />
           <element id="library" level="project" name="org.eclipse.persistence:org.eclipse.persistence.jpa:2.7.6" />
           <element id="library" level="project" name="sqljdbc42" />
+          <element id="library" level="project" name="javax.servlet:jstl:1.2" />
         </element>
       </element>
     </root>

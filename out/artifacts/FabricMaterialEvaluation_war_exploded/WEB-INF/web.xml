@@ -3,13 +3,24 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
-    <servlet>
-        <servlet-name>CrawlServlet</servlet-name>
-        <servlet-class>thanhnv.servlets.CrawlServlet</servlet-class>
-        <load-on-startup>1</load-on-startup>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>CrawlServlet</servlet-name>
-        <url-pattern>/crawl</url-pattern>
-    </servlet-mapping>
+    <!--<servlet>-->
+        <!--<servlet-name>CrawlServlet</servlet-name>-->
+        <!--<servlet-class>thanhnv.servlets.CrawlServlet</servlet-class>-->
+    <!--</servlet>-->
+    <!--<servlet-mapping>-->
+        <!--<servlet-name>CrawlServlet</servlet-name>-->
+        <!--<url-pattern>/CrawlServlet</url-pattern>-->
+    <!--</servlet-mapping>-->
+    <!--<servlet>-->
+        <!--<servlet-name>CategoryServlet</servlet-name>-->
+        <!--<servlet-class>thanhnv.servlets.CategoryServlet</servlet-class>-->
+        <!--<load-on-startup>1</load-on-startup>-->
+    <!--</servlet>-->
+    <!--<servlet-mapping>-->
+        <!--<servlet-name>CategoryServlet</servlet-name>-->
+        <!--<url-pattern>/CategoryServlet</url-pattern>-->
+    <!--</servlet-mapping>-->
+    <welcome-file-list>
+        <welcome-file>CategoryServlet</welcome-file>
+    </welcome-file-list>
 </web-app>

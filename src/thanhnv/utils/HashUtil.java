@@ -26,7 +26,8 @@ public class HashUtil {
         String replaceData = data.replace("&lt;","<").replace("&amp;","&")
                 .replace("&gt;",">").replace("&apos;","\'")
                 .replace("&quot;","\"").replace("reg;","")
-                .replace("#40;","").replace("#41;","");
+                .replace("#40;","").replace("#41;","")
+                .replace("&copy;","");
         return replaceData;
     }
 }

@@ -4,6 +4,8 @@
         <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
         <class>thanhnv.entities.ProductEntity</class>
         <class>thanhnv.entities.MaterialEntity</class>
+        <class>thanhnv.entities.CategoryEntity</class>
+        <class>thanhnv.entities.SysdiagramsEntity</class>
 
         <exclude-unlisted-classes>false</exclude-unlisted-classes>
         <properties>

@@ -36,7 +36,7 @@ public class MaterialCrawler extends PageCrawler{
                 materialEntity.setShrink(materials.getMaterial().get(i).getShrink());
 
                 MaterialRepository materialRepository = new MaterialRepository();
-                materialRepository.addProduct(materialEntity);
+                materialRepository.addMaterial(materialEntity);
             }
         }catch (Exception e){
             e.printStackTrace();
