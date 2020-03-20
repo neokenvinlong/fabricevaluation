@@ -1,7 +1,9 @@
 package thanhnv.crawlers;
 
 import thanhnv.constants.StaticURL;
+import thanhnv.entities.CategoryEntity;
 import thanhnv.jaxb.Categories;
+import thanhnv.repository.CategoryRepository;
 import thanhnv.utils.JAXBUtil;
 
 public class CategoryCrawler extends PageCrawler {
@@ -17,9 +19,19 @@ public class CategoryCrawler extends PageCrawler {
         try {
             Categories categories = (Categories) JAXBUtil.unmarshall(Categories.class, this.crawl(),this.getRealPath()+StaticURL.SCHEMA_CATEGORY);
             categories.getCategory().stream().forEach(category -> {
-                ProductCategoryCrawler productCategoryCrawler = new ProductCategoryCrawler(category.getUrl(),this.getRealPath());
+                //crawl category
+                CategoryEntity categoryEntity = new CategoryEntity();
+                categoryEntity.setName(category.getName());
+
+                CategoryRepository categoryRepository = new CategoryRepository();
+                categoryRepository.addCategory(categoryEntity);
+
+                //crawl product link
+                ProductCategoryCrawler productCategoryCrawler = new ProductCategoryCrawler(category.getUrl(),this.getRealPath(),category.getName());
                 productCategoryCrawler.run();
             });
+
+
         }catch (Exception e){
             e.printStackTrace();
         }

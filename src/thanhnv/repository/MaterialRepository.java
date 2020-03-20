@@ -12,7 +12,7 @@ public class MaterialRepository {
     private static EntityManagerFactory managerFactory;
 
 
-    public MaterialEntity addProduct(MaterialEntity entity) {
+    public MaterialEntity addMaterial(MaterialEntity entity) {
         if (entity == null) {
             return null;
         }
@@ -24,6 +24,8 @@ public class MaterialRepository {
             transaction.commit();
         } catch (Exception e) {
             System.out.println("ERROR in ProductRepository " + e.getMessage());
+        } finally {
+            entityManager.close();
         }
         return entity;
     }

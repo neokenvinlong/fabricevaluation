@@ -4,18 +4,24 @@ import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
-@Table(name = "product", schema = "dbo", catalog = "FabricEvaluation")
+@Table(name = "Product", schema = "dbo", catalog = "FabricEvaluation")
+@NamedQueries(
+        @NamedQuery(name = "ProductEntity.findByHashCode",
+                query = "SELECT p.hashCode FROM ProductEntity p where p.hashCode = :hashCode")
+)
 public class ProductEntity {
     private String productId;
     private String productName;
     private String productImage;
     private Double productPrice;
+    private String productSize;
     private String productInfo;
     private String material;
-    private int sizeId;
+    private String hashCode;
+    private CategoryEntity categoryByCategoryId;
 
     @Id
-    @Column(name = "productId", nullable = false, length = 50)
+    @Column(name = "productId", nullable = false, length = 100)
     public String getProductId() {
         return productId;
     }
@@ -25,7 +31,7 @@ public class ProductEntity {
     }
 
     @Basic
-    @Column(name = "productName", nullable = true, length = 50)
+    @Column(name = "productName", nullable = false, length = 2147483647)
     public String getProductName() {
         return productName;
     }
@@ -35,7 +41,7 @@ public class ProductEntity {
     }
 
     @Basic
-    @Column(name = "productImage", nullable = true, length = 50)
+    @Column(name = "productImage", nullable = true, length = 200)
     public String getProductImage() {
         return productImage;
     }
@@ -55,7 +61,17 @@ public class ProductEntity {
     }
 
     @Basic
-    @Column(name = "productInfo", nullable = true, length = 100)
+    @Column(name = "productSize", nullable = true, length = 200)
+    public String getProductSize() {
+        return productSize;
+    }
+
+    public void setProductSize(String productSize) {
+        this.productSize = productSize;
+    }
+
+    @Basic
+    @Column(name = "productInfo", nullable = true, length = 2147483647)
     public String getProductInfo() {
         return productInfo;
     }
@@ -65,7 +81,7 @@ public class ProductEntity {
     }
 
     @Basic
-    @Column(name = "material", nullable = true, length = 100)
+    @Column(name = "material", nullable = true, length = 2147483647)
     public String getMaterial() {
         return material;
     }
@@ -75,31 +91,42 @@ public class ProductEntity {
     }
 
     @Basic
-    @Column(name = "sizeId", nullable = false)
-    public int getSizeId() {
-        return sizeId;
+    @Column(name = "hashCode", nullable = true, length = 2147483647)
+    public String getHashCode() {
+        return hashCode;
     }
 
-    public void setSizeId(int sizeId) {
-        this.sizeId = sizeId;
+    public void setHashCode(String hashCode) {
+        this.hashCode = hashCode;
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        ProductEntity that = (ProductEntity) o;
-        return sizeId == that.sizeId &&
-                Objects.equals(productId, that.productId) &&
-                Objects.equals(productName, that.productName) &&
-                Objects.equals(productImage, that.productImage) &&
-                Objects.equals(productPrice, that.productPrice) &&
-                Objects.equals(productInfo, that.productInfo) &&
-                Objects.equals(material, that.material);
+        ProductEntity entity = (ProductEntity) o;
+        return Objects.equals(productId, entity.productId) &&
+                Objects.equals(productName, entity.productName) &&
+                Objects.equals(productImage, entity.productImage) &&
+                Objects.equals(productPrice, entity.productPrice) &&
+                Objects.equals(productSize, entity.productSize) &&
+                Objects.equals(productInfo, entity.productInfo) &&
+                Objects.equals(material, entity.material) &&
+                Objects.equals(hashCode, entity.hashCode);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(productId, productName, productImage, productPrice, productInfo, material, sizeId);
+        return Objects.hash(productId, productName, productImage, productPrice, productSize, productInfo, material, hashCode);
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "categoryId", referencedColumnName = "id")
+    public CategoryEntity getCategoryByCategoryId() {
+        return categoryByCategoryId;
+    }
+
+    public void setCategoryByCategoryId(CategoryEntity categoryByCategoryId) {
+        this.categoryByCategoryId = categoryByCategoryId;
     }
 }
