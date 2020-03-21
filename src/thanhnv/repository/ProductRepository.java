@@ -4,6 +4,9 @@ import thanhnv.constants.StaticURL;
 import thanhnv.entities.ProductEntity;
 
 import javax.persistence.*;
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class ProductRepository {
     private static EntityManagerFactory managerFactory;
@@ -27,18 +30,20 @@ public class ProductRepository {
         return entity;
     }
 
-//    public ProductEntity searchCategoryIdByCategoryName(String searchValue){
-//        EntityManager entityManager = getEntityManager();
-//        CategoryEntity categoryEntity = new CategoryEntity();
-//        try {
-//            Query query = entityManager.createQuery("Select c from CategoryEntity c where c.name = :searchValue");
-//            query.setParameter("searchValue",searchValue);
-//            categoryEntity = (CategoryEntity) query.getSingleResult();
-//        } catch (Exception e) {
-//            System.out.println("ERROR in ProductRepository " + e.getMessage());
-//        }
-//        return categoryEntity;
-//    }
+    public ProductEntity getProductByProductId(String productId){
+        EntityManager entityManager = getEntityManager();
+        try {
+            Query query = entityManager.createQuery("Select p from ProductEntity p where p.productId = :productId");
+            query.setParameter("productId",productId);
+            return (ProductEntity) query.getSingleResult();
+        } catch (Exception ex) {
+            Logger.getLogger(getClass().getName()).log(Level.SEVERE,"exception caught",ex);
+            entityManager.getTransaction().rollback();
+            return null;
+        } finally {
+            entityManager.close();
+        }
+    }
 
     public boolean findHashCodeExisting(String hashCode){
         EntityManager entityManager = getEntityManager();
