@@ -13,47 +13,47 @@
     <title>Category Page</title>
 </head>
 <body>
-<%--<c:set var="result" value="${requestScope.CATEGORYLIST}"/>
-<c:if test="${not empty result}">
-    <table>
-        <thead>
-        <tr>
-            <th>Category No</th>
-            <th>Category Name</th>
-        </tr>
-        </thead>
-        <tbody>
+<div id="container">
+
+    <div id="menu">
+        <ul>
+            <li>
+                <form action="SearchServlet" method="POST">
+                    <input type="text" name="txtProductName"/>
+                    <input type="submit" value="Search"/>
+                </form>
+            </li>
+        </ul>
+        <c:set var="result" value="${requestScope.CATEGORYLIST}"/>
         <c:forEach var="dto" items="${result}" varStatus="counter">
             <form action="CategoryServlet">
-            <tr>
-                <td>
-                        ${counter.count}
-                </td>
-                <td>
-                        ${dto.id}
-                </td>
-                <td>
-                        ${dto.name}
-                </td>
-            </tr>
+                <ul>
+                    <li><a href="CategoryProductServlet?id=${dto.id}">${dto.name}</a></li>
+                </ul>
             </form>
         </c:forEach>
-        </tbody>
-    </table>
-</c:if>
-<c:if test="${empty result}">
-    <h2>No record is matched !!!</h2>
-</c:if>--%>
-<c:set var="result" value="${requestScope.CATEGORYLIST}"/>
-<div id="sidebar">
-    <c:forEach var="dto" items="${result}" varStatus="counter">
-        <form action="CategoryServlet">
-        <ul>
-            <li>${dto.name}</li>
-        </ul>
-        </form>
-    </c:forEach>
-</div>
+    </div><!--END #menu-->
+
+    <div id="content">
+        <c:set var="categoryproduct" value="${requestScope.PRODUCTLIST}"/>
+            <div class="row">
+                <c:forEach var="categoryproductdto" items="${categoryproduct}">
+                    <div id="box1" class="col">
+                    <img src="${categoryproductdto.productImage}" alt="CSS"/>
+                    <div id="productinfo">
+                        <div id="producttitle">
+                            <a href="ProductServlet?proId=${categoryproductdto.productId}">${categoryproductdto.productName}</a>
+                        </div>
+                        <div id="productprice">
+                            <span>$ ${categoryproductdto.productPrice}</span>
+                        </div>
+                    </div>
+                </div>
+                </c:forEach>
+            </div><!--.call-to-action-->
+
+    </div><!--#content-->
+</div><!--#container-->
 </body>
 <%--<script src="<c:url value="/resources/main.js" />"></script>--%>
 </html>

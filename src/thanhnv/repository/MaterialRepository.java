@@ -2,11 +2,12 @@ package thanhnv.repository;
 
 import thanhnv.constants.StaticURL;
 import thanhnv.entities.MaterialEntity;
+import thanhnv.entities.ProductEntity;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.EntityTransaction;
-import javax.persistence.Persistence;
+import javax.persistence.*;
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class MaterialRepository {
     private static EntityManagerFactory managerFactory;
@@ -28,6 +29,20 @@ public class MaterialRepository {
             entityManager.close();
         }
         return entity;
+    }
+
+    public List<MaterialEntity> getFiberInMaterial(){
+        EntityManager entityManager = getEntityManager();
+        try {
+            Query query = entityManager.createQuery("Select m from MaterialEntity m");
+            return query.getResultList();
+        } catch (Exception ex) {
+            Logger.getLogger(getClass().getName()).log(Level.SEVERE,"exception caught",ex);
+            entityManager.getTransaction().rollback();
+            return null;
+        } finally {
+            entityManager.close();
+        }
     }
 
     public static EntityManager getEntityManager(){

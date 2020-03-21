@@ -47,17 +47,32 @@ public class CategoryRepository {
         return categoryEntity;
     }
 
-    public List<ProductEntity> getProductListByCategoryId(int id){
+    public CategoryEntity searchCategoryByCategoryId(int searchValue){
         EntityManager entityManager = getEntityManager();
-        List<ProductEntity> productEntityList = new ArrayList<>();
+        CategoryEntity categoryEntity = new CategoryEntity();
         try {
-            Query query = entityManager.createQuery("Select p from ProductEntity p where p.categoryByCategoryId = :id");
-            query.setParameter("id",id);
-            productEntityList = query.getResultList();
+            Query query = entityManager.createQuery("Select c from CategoryEntity c where c.id = :searchValue");
+            query.setParameter("searchValue",searchValue);
+            categoryEntity = (CategoryEntity) query.getSingleResult();
         } catch (Exception e) {
             System.out.println("ERROR in ProductRepository " + e.getMessage());
         }
-        return productEntityList;
+        return categoryEntity;
+    }
+
+    public List<ProductEntity> getProductListByCategoryId(CategoryEntity entity){
+        EntityManager entityManager = getEntityManager();
+        try {
+            Query query = entityManager.createQuery("Select p from ProductEntity p where p.categoryByCategoryId = :id");
+            query.setParameter("id",entity);
+            return query.getResultList();
+        } catch (Exception ex) {
+            Logger.getLogger(getClass().getName()).log(Level.SEVERE,"exception caught",ex);
+            entityManager.getTransaction().rollback();
+            return null;
+        } finally {
+            entityManager.close();
+        }
     }
 
     public List<CategoryEntity> readCategoryList(){

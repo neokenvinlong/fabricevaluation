@@ -23,15 +23,9 @@ public class CategoryServlet extends HttpServlet {
             throws ServletException, IOException {
 
         response.setContentType("text/html;charset=UTF-8");
-        PrintWriter out =response.getWriter();
         try{
             CategoryRepository categoryRepository = new CategoryRepository();
             List<CategoryEntity> result = categoryRepository.readCategoryList();
-            System.out.println("size:----------"+result.size());
-//            for (int i = 0; i< result.size();i++){
-//                System.out.println(result.get(i).getId());
-//                System.out.println(result.get(i).getName());
-//            }
             request.setAttribute("CATEGORYLIST",result);
 
         }finally{
