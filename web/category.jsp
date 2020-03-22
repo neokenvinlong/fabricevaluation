@@ -9,7 +9,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-    <link href="<c:url value="/resources/main.css" />" rel="stylesheet">
+    <link href="<c:url value="/resources/index.css" />" rel="stylesheet">
     <title>Category Page</title>
 </head>
 <body>
@@ -19,8 +19,14 @@
         <ul>
             <li>
                 <form action="SearchServlet" method="POST">
-                    <input type="text" name="txtProductName"/>
-                    <input type="submit" value="Search"/>
+                    <%--<input type="text" name="txtProductName"/>--%>
+                    <%--<input type="submit" value="Search"/>--%>
+                    <div class="search-container">
+                        <form action="/action_page.php">
+                            <input type="text" placeholder="Search.." name="txtProductName">
+                            <input type="submit" value="Search"/>
+                        </form>
+                    </div>
                 </form>
             </li>
         </ul>

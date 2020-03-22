@@ -37,6 +37,7 @@ a:visited {
     overflow-y: scroll;
     height: 100%;
     position: fixed;
+    top: 0;
 }
 
 #menu::-webkit-scrollbar {
@@ -85,7 +86,6 @@ body::-webkit-scrollbar {
     width: 20%;
     margin-right: 2.99%;
     padding-top: 40px;
-    height: 300px;
 }
 h2{
     font-size: 20px;
@@ -96,7 +96,7 @@ h2{
     display: block;
 }
 /* Style cho ảnh */
- img {
+img {
     float: left;
     margin-right: 1em;
     width: 320px;
@@ -121,4 +121,19 @@ h2{
 #productprice{
     float: right;
     text-align: right;
+}
+
+/*search*/
+.search-container {
+    float: right;
+    overflow: hidden;
+}
+.search-container input {
+    padding: 6px 2px;
+    margin-top: 8px;
+    margin-right: 10px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
 }

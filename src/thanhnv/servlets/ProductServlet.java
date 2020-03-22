@@ -50,9 +50,18 @@ public class ProductServlet extends HttpServlet {
                     fiberResultList.add(fiberList.get(i));
                 }
             }
-            System.out.println(fiberResultList);
+//            System.out.println(fiberResultList);
 
             request.setAttribute("MATERIALLIST",fiberResultList);
+
+            String appear ="";
+            for (int i=0 ; i< fiberResultList.size();i++){
+                appear += fiberResultList.get(i).getAppearance();
+            }
+//            System.out.println("chuoi :"+ appear);
+            List<String> season = materialRepository.getMaterialInfoForSeason(productEntity, appear);
+//            System.out.println("aaaa"+season);
+            request.setAttribute("SEASON",season);
         } finally {
             RequestDispatcher rd = request.getRequestDispatcher(detailPage);
             rd.forward(request, response);

@@ -45,6 +45,21 @@ public class ProductRepository {
         }
     }
 
+    public List<ProductEntity> getProductByProductName(String productName){
+        EntityManager entityManager = getEntityManager();
+        try {
+            Query query = entityManager.createQuery("Select p from ProductEntity p where p.productName LIKE :productName");
+            query.setParameter("productName", "%"+productName+"%");
+            return query.getResultList();
+        } catch (Exception ex) {
+            Logger.getLogger(getClass().getName()).log(Level.SEVERE,"exception caught",ex);
+            entityManager.getTransaction().rollback();
+            return null;
+        } finally {
+            entityManager.close();
+        }
+    }
+
     public boolean findHashCodeExisting(String hashCode){
         EntityManager entityManager = getEntityManager();
         Query query = entityManager.createNamedQuery("ProductEntity.findByHashCode");

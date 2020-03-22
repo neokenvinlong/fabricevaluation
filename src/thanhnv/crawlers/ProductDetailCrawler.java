@@ -13,6 +13,7 @@ public class ProductDetailCrawler extends PageCrawler implements Runnable{
 
 //    private Thread thread;
     private String categoryName;
+    private static int count = 0;
 
     public ProductDetailCrawler(String url, String realPath, String categoryName) {
         super(url, realPath);
@@ -73,12 +74,16 @@ public class ProductDetailCrawler extends PageCrawler implements Runnable{
                 entity.setCategoryByCategoryId(categoryEntity1);
 
                 ProductRepository productRepository = new ProductRepository();
+                String cateIDString = String.valueOf(categoryEntity1.getId());
                 //hashcode
-                if (!productRepository.findHashCodeExisting(HashUtil.hashMD5(product.getProductid() + product.getProductname()))) {
-                    entity.setHashCode(HashUtil.hashMD5(product.getProductid() + product.getProductname()));
+                if (!productRepository.findHashCodeExisting(HashUtil.hashMD5(product.getProductid() + product.getProductname() + cateIDString))) {
+                    entity.setHashCode(HashUtil.hashMD5(product.getProductid() + product.getProductname() + cateIDString));
                     productRepository.addProduct(entity);
+                    count ++;
+                    System.out.println("product no :" + count);
                 }
             }
+            System.out.println("Total product: " + count);
 
 //            System.out.println(this.crawl());
 
