@@ -21,23 +21,21 @@
     <div class="row">
         <div id="imageLarge" class="col">
             <img src="<%=value.getProductImage()%>" alt="CSS"/>
-            <div id="name">aaaaaaaaaaaaaa</div>
-            <div id="weather">
-                <div class="row1">
-                    <div id="weatheritem" class="col">
-                        Spring
-                    </div>
-                    <div id="weatheritem" class="col">
-                        Summer
-                    </div>
-                    <div id="weatheritem" class="col">
-                        Fall
-                    </div>
-                    <div id="weatheritem" class="col">
-                        Winter
+            <c:set var="resultseason" value="${requestScope.SEASON}"/>
+            <c:if test="${not empty resultseason}">
+
+                <div id="weather">
+                    <div class="row1">
+                        <c:forEach var="seasondto" items="${resultseason}">
+                            <form action="ProductServlet">
+                                <div id="weatheritem" class="col">
+                                    ${seasondto}
+                                </div>
+                            </form>
+                        </c:forEach>
                     </div>
                 </div>
-            </div>
+            </c:if>
         </div>
         <div id="info" class="col">
             <div id="product">
