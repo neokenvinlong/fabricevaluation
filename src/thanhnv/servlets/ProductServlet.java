@@ -16,6 +16,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 @WebServlet(name = "ProductServlet", urlPatterns = "/ProductServlet")
 public class ProductServlet extends HttpServlet {
@@ -32,8 +34,32 @@ public class ProductServlet extends HttpServlet {
             String replace = productEntity.getProductInfo().replace(".","<br/>").replace("!","<br/>");
 
             productEntity.setProductInfo(replace);
-            request.setAttribute("PRODUCT", productEntity);
 
+            //System.out.println("material mau:" + productEntity.getMaterial());
+            String matching = "(?:\\b|-)([1-9]{1,2}[0]?|100)\\b\\%";
+
+            String mate = productEntity.getMaterial().replaceAll(matching,"");
+//            System.out.println("material sau:" + mate);
+
+            //test
+//            String mau = "100% Cotton/ Rib: 91% Cotton, 7% Polyester, 2% Spandex";
+//            String matching1 = "(?:\\b|-)([1-9]{1,2}[0]?|100)\\b\\% ([A-Z])\\w+";
+//            Pattern pattern = Pattern.compile(matching1);
+//            Matcher matcher = pattern.matcher(mau);
+//            List<Integer> percentList = new ArrayList<>();
+//            List<String> mateList = new ArrayList<>();
+//            while (matcher.find()){
+//                String a = matcher.group();
+//                System.out.println("aaa"+a);
+//                String []b = a.split(" ");
+//                System.out.println("bbb"+ b[0] +"xxxx" + b[1]);
+//                int bInt = Integer.parseInt(b[0].replace("%",""));
+//                percentList.add(bInt);
+//                mateList.add(b[1]);
+//            }
+//            System.out.println("Percent list "+ percentList);
+//            System.out.println("Mate List"+ mateList);
+            //end of test
             String[] sizeSplit = productEntity.getProductSize().split("/");
             List<String> sizeList = new ArrayList<>();
             for (int i = 1; i < sizeSplit.length; i++) {
@@ -62,6 +88,9 @@ public class ProductServlet extends HttpServlet {
             List<String> season = materialRepository.getMaterialInfoForSeason(productEntity, appear);
 //            System.out.println("aaaa"+season);
             request.setAttribute("SEASON",season);
+
+            productEntity.setMaterial(mate);
+            request.setAttribute("PRODUCT", productEntity);
         } finally {
             RequestDispatcher rd = request.getRequestDispatcher(detailPage);
             rd.forward(request, response);
