@@ -67,32 +67,34 @@ public class MaterialRepository {
                     || productEntity.getProductName().toLowerCase().contains("chino")
                     || productEntity.getProductName().contains("UV PROTECTION")
                     || productEntity.getProductName().toLowerCase().contains("kando shorts")
-                    || productEntity.getProductName().toLowerCase().contains("short-sleeve")) {
+                    || productEntity.getProductName().toLowerCase().contains("short-sleeve")
+                    || productEntity.getProductName().toLowerCase().contains("tank")) {
                 season.add("HOT WEATHER");
             }else if (appear.toLowerCase().contains("absorbs moisture") || appear.toLowerCase().contains("easily absorbs")) {
                 season.add("HOT WEATHER");
             }
-
-            if (productEntity.getMaterial().toLowerCase().contains("leather")
-                    || productEntity.getMaterial().toLowerCase().contains("100% polyester")
-                    || productEntity.getCategoryByCategoryId().getId() == 2
-                    || productEntity.getCategoryByCategoryId().getId() == 3
-                    || productEntity.getCategoryByCategoryId().getId() == 16
-                    || productEntity.getCategoryByCategoryId().getId() == 17
-                    || productEntity.getCategoryByCategoryId().getId() == 19) {
-                season.add("COLD WEATHER");
-            }else if (productEntity.getProductName().toLowerCase().contains("wool")
-                    || productEntity.getProductName().toLowerCase().contains("parka")
-                    || productEntity.getProductName().toLowerCase().contains("coat")
-                    || productEntity.getProductName().toLowerCase().contains("sweatpants")
-                    || productEntity.getProductName().toLowerCase().contains("chino")
-                    || productEntity.getProductName().toLowerCase().contains("warm")
-                    || productEntity.getProductName().contains("UV PROTECTION")
-                    || productEntity.getProductName().toLowerCase().contains("turtleneck")
-                    || productEntity.getProductName().toLowerCase().contains("long-sleeve")) {
-                season.add("COLD WEATHER");
-            } else if (appear.toLowerCase().contains("not absorbant") || appear.toLowerCase().contains("cold")) {
-                season.add("COLD WEATHER");
+            if(!productEntity.getProductName().toLowerCase().contains("tank")) {
+                if (productEntity.getMaterial().toLowerCase().contains("leather")
+                        || productEntity.getMaterial().toLowerCase().contains("100% polyester")
+                        || productEntity.getCategoryByCategoryId().getId() == 2
+                        || productEntity.getCategoryByCategoryId().getId() == 3
+                        || productEntity.getCategoryByCategoryId().getId() == 16
+                        || productEntity.getCategoryByCategoryId().getId() == 17
+                        || productEntity.getCategoryByCategoryId().getId() == 19) {
+                    season.add("COLD WEATHER");
+                } else if (productEntity.getProductName().toLowerCase().contains("wool")
+                        || productEntity.getProductName().toLowerCase().contains("parka")
+                        || productEntity.getProductName().toLowerCase().contains("coat")
+                        || productEntity.getProductName().toLowerCase().contains("sweatpants")
+                        || productEntity.getProductName().toLowerCase().contains("chino")
+                        || productEntity.getProductName().toLowerCase().contains("warm")
+                        || productEntity.getProductName().contains("UV PROTECTION")
+                        || productEntity.getProductName().toLowerCase().contains("turtleneck")
+                        || productEntity.getProductName().toLowerCase().contains("long-sleeve")) {
+                    season.add("COLD WEATHER");
+                } else if (appear.toLowerCase().contains("not absorbant") || appear.toLowerCase().contains("cold")) {
+                    season.add("COLD WEATHER");
+                }
             }
         }
         return season;
