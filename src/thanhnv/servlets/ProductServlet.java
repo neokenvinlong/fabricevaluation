@@ -1,9 +1,7 @@
 package thanhnv.servlets;
 
-import thanhnv.entities.CategoryEntity;
 import thanhnv.entities.MaterialEntity;
 import thanhnv.entities.ProductEntity;
-import thanhnv.repository.CategoryRepository;
 import thanhnv.repository.MaterialRepository;
 import thanhnv.repository.ProductRepository;
 
@@ -16,8 +14,6 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 @WebServlet(name = "ProductServlet", urlPatterns = "/ProductServlet")
 public class ProductServlet extends HttpServlet {
@@ -85,8 +81,9 @@ public class ProductServlet extends HttpServlet {
                 appear += fiberResultList.get(i).getAppearance();
             }
 //            System.out.println("chuoi :"+ appear);
-            List<String> season = materialRepository.getMaterialInfoForSeason(productEntity, appear);
-//            System.out.println("aaaa"+season);
+//            List<String> season = materialRepository.getMaterialInfoForSeason(productEntity, appear);
+            List<String> season = materialRepository.getMaterialAnalystForSeason(productEntity);
+            System.out.println("aaaa"+season);
             request.setAttribute("SEASON",season);
 
             productEntity.setMaterial(mate);
