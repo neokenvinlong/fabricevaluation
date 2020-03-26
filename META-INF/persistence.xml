@@ -6,6 +6,7 @@
         <class>thanhnv.entities.MaterialEntity</class>
         <class>thanhnv.entities.CategoryEntity</class>
         <class>thanhnv.entities.SysdiagramsEntity</class>
+        <class>thanhnv.entities.AnalysisEntity</class>
 
         <exclude-unlisted-classes>false</exclude-unlisted-classes>
         <properties>

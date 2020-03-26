@@ -1,6 +1,8 @@
 package thanhnv.entities;
 
 import javax.persistence.*;
+import java.util.Collection;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -18,6 +20,7 @@ public class ProductEntity {
     private String productInfo;
     private String material;
     private String hashCode;
+    private List<AnalysisEntity> analysesByProductId;
     private CategoryEntity categoryByCategoryId;
 
     @Id
@@ -104,20 +107,29 @@ public class ProductEntity {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        ProductEntity entity = (ProductEntity) o;
-        return Objects.equals(productId, entity.productId) &&
-                Objects.equals(productName, entity.productName) &&
-                Objects.equals(productImage, entity.productImage) &&
-                Objects.equals(productPrice, entity.productPrice) &&
-                Objects.equals(productSize, entity.productSize) &&
-                Objects.equals(productInfo, entity.productInfo) &&
-                Objects.equals(material, entity.material) &&
-                Objects.equals(hashCode, entity.hashCode);
+        ProductEntity that = (ProductEntity) o;
+        return Objects.equals(productId, that.productId) &&
+                Objects.equals(productName, that.productName) &&
+                Objects.equals(productImage, that.productImage) &&
+                Objects.equals(productPrice, that.productPrice) &&
+                Objects.equals(productSize, that.productSize) &&
+                Objects.equals(productInfo, that.productInfo) &&
+                Objects.equals(material, that.material) &&
+                Objects.equals(hashCode, that.hashCode);
     }
 
     @Override
     public int hashCode() {
         return Objects.hash(productId, productName, productImage, productPrice, productSize, productInfo, material, hashCode);
+    }
+
+    @OneToMany(mappedBy = "productByProductId")
+    public List<AnalysisEntity> getAnalysesByProductId() {
+        return analysesByProductId;
+    }
+
+    public void setAnalysesByProductId(List<AnalysisEntity> analysesByProductId) {
+        this.analysesByProductId = analysesByProductId;
     }
 
     @ManyToOne

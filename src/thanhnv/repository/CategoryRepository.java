@@ -3,10 +3,8 @@ package thanhnv.repository;
 import thanhnv.constants.StaticURL;
 import thanhnv.entities.CategoryEntity;
 import thanhnv.entities.ProductEntity;
-import thanhnv.jaxb.Category;
 
 import javax.persistence.*;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;

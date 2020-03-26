@@ -1,13 +1,20 @@
 package thanhnv.crawlers;
 
 import thanhnv.constants.StaticURL;
+import thanhnv.entities.AnalysisEntity;
 import thanhnv.entities.CategoryEntity;
 import thanhnv.entities.ProductEntity;
 import thanhnv.jaxb.Product;
+import thanhnv.repository.AnalysisRepository;
 import thanhnv.repository.CategoryRepository;
 import thanhnv.repository.ProductRepository;
 import thanhnv.utils.HashUtil;
 import thanhnv.utils.JAXBUtil;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class ProductDetailCrawler extends PageCrawler implements Runnable{
 
@@ -78,9 +85,42 @@ public class ProductDetailCrawler extends PageCrawler implements Runnable{
                 //hashcode
                 if (!productRepository.findHashCodeExisting(HashUtil.hashMD5(product.getProductid() + product.getProductname() + cateIDString))) {
                     entity.setHashCode(HashUtil.hashMD5(product.getProductid() + product.getProductname() + cateIDString));
+
                     productRepository.addProduct(entity);
                     count ++;
                     System.out.println("product no :" + count);
+
+                    //get material ID
+
+                    String mau = HashUtil.changeValue(product.getMaterial());
+                    String matching1 = "(?:\\b|-)([1-9]{1,2}[0]?|100)\\b\\% ([A-Z])\\w+";
+                    Pattern pattern = Pattern.compile(matching1);
+                    Matcher matcher = pattern.matcher(mau);
+                    List<Integer> percentList = new ArrayList<>();
+                    List<String> mateList = new ArrayList<>();
+                    while (matcher.find()){
+                        String a = matcher.group();
+                        System.out.println("aaa"+a);
+                        String []b = a.split(" ");
+                        System.out.println("bbb"+ b[0] +"xxxx" + b[1]);
+                        int bInt = Integer.parseInt(b[0].replace("%",""));
+                        percentList.add(bInt);
+                        mateList.add(b[1]);
+                    }
+                    System.out.println("Percent list "+ percentList);
+                    System.out.println("Mate List"+ mateList);
+
+                    AnalysisEntity analysisEntity = new AnalysisEntity();
+                    AnalysisRepository analysisRepository = new AnalysisRepository();
+                    for(int i=0; i< percentList.size(); i++){
+                        analysisEntity.setPercentage(percentList.get(i));
+                        analysisEntity.setFabridName(mateList.get(i));
+                        analysisEntity.setProductByProductId(entity);
+                        analysisRepository.addMaterialAnalysis(analysisEntity);
+                    }
+
+
+                    //end of get material ID
                 }
             }
             System.out.println("Total product: " + count);

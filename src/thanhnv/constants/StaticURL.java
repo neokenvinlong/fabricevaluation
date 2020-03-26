@@ -1,5 +1,8 @@
 package thanhnv.constants;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class StaticURL {
     public static final String XSL_CATEGORY = "/WEB-INF/uniqlo/category.xsl";
     public static final String OUTPUT_CATEGORY = "/WEB-INF/uniqlo/category.xml";

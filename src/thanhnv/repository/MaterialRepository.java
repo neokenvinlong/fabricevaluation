@@ -1,8 +1,10 @@
 package thanhnv.repository;
 
 import thanhnv.constants.StaticURL;
+import thanhnv.entities.AnalysisEntity;
 import thanhnv.entities.MaterialEntity;
 import thanhnv.entities.ProductEntity;
+import thanhnv.utils.StringUtil;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -45,7 +47,78 @@ public class MaterialRepository {
             entityManager.close();
         }
     }
+    public List<String> getMaterialAnalystForSeason(ProductEntity productEntity){
+        List<String> season = new ArrayList<>();
+        AnalysisRepository analysisRepository = new AnalysisRepository();
+        List<AnalysisEntity> analysisEntityList;
+        if (!productEntity.getProductName().toLowerCase().contains("backpack")
+                && !productEntity.getProductName().toLowerCase().contains("bag")
+                && !productEntity.getProductName().toLowerCase().contains("hat")
+                && !productEntity.getProductName().toLowerCase().contains("briefs")
+                && !productEntity.getProductName().toLowerCase().contains("cap")) {
+            analysisEntityList = analysisRepository.getAnalysisInMaterial(productEntity);
+            List<Integer> percentList = new ArrayList<>();
+            List<String> fabridList = new ArrayList<>();
+            List<String> fabridNewList = new ArrayList<>();
+            int percentage = 0;
+            System.out.println("size la "+analysisEntityList.size());
+            if(analysisEntityList.size() >1) {
+                for (int i = 0; i < analysisEntityList.size(); i++) {
+                    if (percentage < 100) {
+                        percentList.add(analysisEntityList.get(i).getPercentage());
+                        System.out.println("percentage lay ra :" +analysisEntityList.get(i).getPercentage());
+                        fabridList.add(analysisEntityList.get(i).getFabridName());
+                        System.out.println("fabrid lay ra :" +analysisEntityList.get(i).getFabridName());
+                        percentage = percentage + analysisEntityList.get(i).getPercentage();
+                        System.out.println("percentage moi lan for :" + percentage);
+                    }else {
+                        break;
+                    }
+                }
 
+                //compare percentage
+                if(percentList.get(0) - percentList.get(1) < 20){
+                    fabridNewList.add(fabridList.get(0));
+                    fabridNewList.add(fabridList.get(1));
+                }else if(percentList.get(0) - percentList.get(1) > 20){
+                    fabridNewList.add(fabridList.get(0));
+                }
+                for(int i = 0; i< fabridNewList.size(); i++){
+                    System.out.println("fabric dung de check season: "+ fabridNewList.get(i));
+                }
+
+            }
+            if(analysisEntityList.size() == 1){
+                percentList.add(analysisEntityList.get(0).getPercentage());
+                System.out.println("percentage lay ra 0 la:" +analysisEntityList.get(0).getPercentage());
+                fabridList.add(analysisEntityList.get(0).getFabridName());
+                System.out.println("fabrid lay ra 0 la:" +analysisEntityList.get(0).getFabridName());
+
+                fabridNewList.add(analysisEntityList.get(0).getFabridName());
+            }
+            for(int i=0; i< fabridNewList.size(); i++){
+                System.out.println("aaaaaaa");
+                for (int j = 0; j < StringUtil.getMateResultHotList().size(); j++){
+                    if(fabridNewList.get(i).toLowerCase().contains(StringUtil.getMateResultHotList().get(j))){
+                        System.out.println("HOTHOT");
+                        season.add("HOT WEATHER");
+                    }
+                }
+            }
+
+            for(int i=0; i< fabridNewList.size(); i++){
+                System.out.println("bbbbbbbb");
+                for (int j = 0; j < StringUtil.getMateResultColdList().size(); j++){
+                    if(fabridNewList.get(i).toLowerCase().contains(StringUtil.getMateResultColdList().get(j))){
+                        System.out.println("COLDCOLD");
+                        season.add("COLD WEATHER");
+                    }
+                }
+            }
+
+        }
+        return season;
+    }
     public List<String> getMaterialInfoForSeason(ProductEntity productEntity, String appear) {
         List<String> season = new ArrayList<>();
 
