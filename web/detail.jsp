@@ -74,7 +74,28 @@
                 </div>
                 <span>Material:</span>
                 <div class="information">
-                    <%=value.getMaterial()%>
+
+                    <c:set var="result" value="${requestScope.ANALYST}"/>
+                    <c:if test="${not empty result}">
+
+                        <div>
+                            <table id="customers">
+                                <tr>
+                                    <th>Fiber</th>
+                                    <th>Percentage (%)</th>
+                                </tr>
+                                <c:forEach var="dto" items="${result}">
+                                    <form action="ProductServlet">
+                                        <tr>
+                                            <td>${dto.fabridName}</td>
+                                            <td>${dto.percent}</td>
+                                        </tr>
+                                    </form>
+                                </c:forEach>
+                            </table>
+
+                        </div>
+                    </c:if>
                 </div>
             </div>
         </div>
