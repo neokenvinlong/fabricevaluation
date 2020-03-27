@@ -44,6 +44,19 @@ public class ProductRepository {
             entityManager.close();
         }
     }
+    public List<ProductEntity> getProductList(){
+        EntityManager entityManager = getEntityManager();
+        try {
+            Query query = entityManager.createQuery("Select p from ProductEntity p");
+            return query.getResultList();
+        } catch (Exception ex) {
+            Logger.getLogger(getClass().getName()).log(Level.SEVERE,"exception caught",ex);
+            entityManager.getTransaction().rollback();
+            return null;
+        } finally {
+            entityManager.close();
+        }
+    }
 
     public List<ProductEntity> getProductByProductName(String productName){
         EntityManager entityManager = getEntityManager();

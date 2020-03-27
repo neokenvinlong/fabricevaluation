@@ -137,3 +137,7 @@ img {
     border: none;
     cursor: pointer;
 }
+
+.textWeather {
+    color: white;
+}
