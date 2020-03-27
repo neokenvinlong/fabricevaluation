@@ -1,7 +1,10 @@
 package thanhnv.servlets;
 
+import thanhnv.entities.AnalysisEntity;
 import thanhnv.entities.MaterialEntity;
 import thanhnv.entities.ProductEntity;
+import thanhnv.jaxb.Analysis;
+import thanhnv.repository.AnalysisRepository;
 import thanhnv.repository.MaterialRepository;
 import thanhnv.repository.ProductRepository;
 
@@ -27,64 +30,59 @@ public class ProductServlet extends HttpServlet {
             String id = request.getParameter("proId");
             ProductRepository productRepository = new ProductRepository();
             ProductEntity productEntity = productRepository.getProductByProductId(id);
-            String replace = productEntity.getProductInfo().replace(".","<br/>").replace("!","<br/>");
+            String replace = productEntity.getProductInfo().replace(".", "<br/>").replace("!", "<br/>");
 
             productEntity.setProductInfo(replace);
 
             //System.out.println("material mau:" + productEntity.getMaterial());
             String matching = "(?:\\b|-)([1-9]{1,2}[0]?|100)\\b\\%";
 
-            String mate = productEntity.getMaterial().replaceAll(matching,"");
+            String mate = productEntity.getMaterial().replaceAll(matching, "");
 //            System.out.println("material sau:" + mate);
 
-            //test
-//            String mau = "100% Cotton/ Rib: 91% Cotton, 7% Polyester, 2% Spandex";
-//            String matching1 = "(?:\\b|-)([1-9]{1,2}[0]?|100)\\b\\% ([A-Z])\\w+";
-//            Pattern pattern = Pattern.compile(matching1);
-//            Matcher matcher = pattern.matcher(mau);
-//            List<Integer> percentList = new ArrayList<>();
-//            List<String> mateList = new ArrayList<>();
-//            while (matcher.find()){
-//                String a = matcher.group();
-//                System.out.println("aaa"+a);
-//                String []b = a.split(" ");
-//                System.out.println("bbb"+ b[0] +"xxxx" + b[1]);
-//                int bInt = Integer.parseInt(b[0].replace("%",""));
-//                percentList.add(bInt);
-//                mateList.add(b[1]);
-//            }
-//            System.out.println("Percent list "+ percentList);
-//            System.out.println("Mate List"+ mateList);
-            //end of test
+
             String[] sizeSplit = productEntity.getProductSize().split("/");
             List<String> sizeList = new ArrayList<>();
             for (int i = 1; i < sizeSplit.length; i++) {
                 sizeList.add(sizeSplit[i]);
             }
-            request.setAttribute("PRODUCTSIZE",sizeList);
+            request.setAttribute("PRODUCTSIZE", sizeList);
 
-            String fiber = productEntity.getMaterial();
+            //get material
+            AnalysisRepository analysisRepository = new AnalysisRepository();
+            List<AnalysisEntity> analysisEntityList = analysisRepository.getAnalysisInMaterial(productEntity);
+            List<Analysis> analysisList = new ArrayList<>();
+            int percentage = 0;
+            for (int i = 0; i < analysisEntityList.size(); i++) {
+                if (percentage < 100) {
+                    Analysis analysis = new Analysis(analysisEntityList.get(i).getFabridName(), analysisEntityList.get(i).getPercentage());
+                    analysisList.add(analysis);
+                    percentage = percentage + analysisEntityList.get(i).getPercentage();
+                } else {
+                    break;
+                }
+            }
+            request.setAttribute("ANALYST", analysisList);
+
+
             MaterialRepository materialRepository = new MaterialRepository();
             List<MaterialEntity> fiberList = materialRepository.getFiberInMaterial();
             List<MaterialEntity> fiberResultList = new ArrayList<>();
-            for(int i=0; i < fiberList.size();i++){
-                if(fiber.contains(fiberList.get(i).getFiber())){
-                    fiberResultList.add(fiberList.get(i));
+            for (int i = 0; i < fiberList.size(); i++) {
+                for (int j = 0; j < analysisList.size(); j++) {
+                    if (analysisList.get(j).getFabridName().toLowerCase().equals(fiberList.get(i).getFiber().toLowerCase())) {
+                        fiberResultList.add(fiberList.get(i));
+                    }
+
                 }
             }
-//            System.out.println(fiberResultList);
 
-            request.setAttribute("MATERIALLIST",fiberResultList);
 
-            String appear ="";
-            for (int i=0 ; i< fiberResultList.size();i++){
-                appear += fiberResultList.get(i).getAppearance();
-            }
-//            System.out.println("chuoi :"+ appear);
-//            List<String> season = materialRepository.getMaterialInfoForSeason(productEntity, appear);
+            request.setAttribute("MATERIALLIST", fiberResultList);
+
             List<String> season = materialRepository.getMaterialAnalystForSeason(productEntity);
-            System.out.println("aaaa"+season);
-            request.setAttribute("SEASON",season);
+            request.setAttribute("SEASON", season);
+
 
             productEntity.setMaterial(mate);
             request.setAttribute("PRODUCT", productEntity);

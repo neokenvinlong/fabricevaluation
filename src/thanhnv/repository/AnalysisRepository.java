@@ -3,6 +3,7 @@ package thanhnv.repository;
 import thanhnv.constants.StaticURL;
 import thanhnv.entities.AnalysisEntity;
 import thanhnv.entities.ProductEntity;
+import thanhnv.jaxb.Analysis;
 
 import javax.persistence.*;
 import java.util.List;
@@ -30,7 +31,7 @@ public class AnalysisRepository {
     public List<AnalysisEntity> getAnalysisInMaterial(ProductEntity productEntity) {
         EntityManager entityManager = getEntityManager();
         try {
-            Query query = entityManager.createQuery("Select m from AnalysisEntity m where m.productByProductId = :productEntity");
+            Query query = entityManager.createQuery("Select a from AnalysisEntity a where a.productByProductId = :productEntity");
             query.setParameter("productEntity",productEntity);
             return query.getResultList();
         } catch (Exception ex) {

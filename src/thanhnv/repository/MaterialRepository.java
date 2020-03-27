@@ -47,7 +47,8 @@ public class MaterialRepository {
             entityManager.close();
         }
     }
-    public List<String> getMaterialAnalystForSeason(ProductEntity productEntity){
+
+    public List<String> getMaterialAnalystForSeason(ProductEntity productEntity) {
         List<String> season = new ArrayList<>();
         AnalysisRepository analysisRepository = new AnalysisRepository();
         List<AnalysisEntity> analysisEntityList;
@@ -57,60 +58,45 @@ public class MaterialRepository {
                 && !productEntity.getProductName().toLowerCase().contains("briefs")
                 && !productEntity.getProductName().toLowerCase().contains("cap")) {
             analysisEntityList = analysisRepository.getAnalysisInMaterial(productEntity);
+//            System.out.println("Info :" + productEntity.getMaterial());
             List<Integer> percentList = new ArrayList<>();
             List<String> fabridList = new ArrayList<>();
             List<String> fabridNewList = new ArrayList<>();
             int percentage = 0;
-            System.out.println("size la "+analysisEntityList.size());
-            if(analysisEntityList.size() >1) {
-                for (int i = 0; i < analysisEntityList.size(); i++) {
-                    if (percentage < 100) {
-                        percentList.add(analysisEntityList.get(i).getPercentage());
-                        System.out.println("percentage lay ra :" +analysisEntityList.get(i).getPercentage());
-                        fabridList.add(analysisEntityList.get(i).getFabridName());
-                        System.out.println("fabrid lay ra :" +analysisEntityList.get(i).getFabridName());
-                        percentage = percentage + analysisEntityList.get(i).getPercentage();
-                        System.out.println("percentage moi lan for :" + percentage);
-                    }else {
-                        break;
-                    }
+//            System.out.println("size la " + analysisEntityList.size());
+            for (int i = 0; i < analysisEntityList.size(); i++) {
+                if (percentage < 100) {
+                    percentList.add(analysisEntityList.get(i).getPercentage());
+                    fabridList.add(analysisEntityList.get(i).getFabridName());
+                    percentage = percentage + analysisEntityList.get(i).getPercentage();
+                } else {
+                    break;
                 }
+            }
 
-                //compare percentage
-                if(percentList.get(0) - percentList.get(1) < 20){
+            //compare percentage
+            if (percentList.size() == 1) {
+                fabridNewList.add(fabridList.get(0));
+            } else {
+                if (percentList.get(0) - percentList.get(1) <= 20) {
                     fabridNewList.add(fabridList.get(0));
                     fabridNewList.add(fabridList.get(1));
-                }else if(percentList.get(0) - percentList.get(1) > 20){
+                } else if (percentList.get(0) - percentList.get(1) > 20) {
                     fabridNewList.add(fabridList.get(0));
                 }
-                for(int i = 0; i< fabridNewList.size(); i++){
-                    System.out.println("fabric dung de check season: "+ fabridNewList.get(i));
-                }
-
             }
-            if(analysisEntityList.size() == 1){
-                percentList.add(analysisEntityList.get(0).getPercentage());
-                System.out.println("percentage lay ra 0 la:" +analysisEntityList.get(0).getPercentage());
-                fabridList.add(analysisEntityList.get(0).getFabridName());
-                System.out.println("fabrid lay ra 0 la:" +analysisEntityList.get(0).getFabridName());
 
-                fabridNewList.add(analysisEntityList.get(0).getFabridName());
-            }
-            for(int i=0; i< fabridNewList.size(); i++){
-                System.out.println("aaaaaaa");
-                for (int j = 0; j < StringUtil.getMateResultHotList().size(); j++){
-                    if(fabridNewList.get(i).toLowerCase().contains(StringUtil.getMateResultHotList().get(j))){
-                        System.out.println("HOTHOT");
+            for (int i = 0; i < fabridNewList.size(); i++) {
+                for (int j = 0; j < StringUtil.getMateResultHotList().size(); j++) {
+                    if (fabridNewList.get(i).toLowerCase().contains(StringUtil.getMateResultHotList().get(j))) {
                         season.add("HOT WEATHER");
                     }
                 }
             }
 
-            for(int i=0; i< fabridNewList.size(); i++){
-                System.out.println("bbbbbbbb");
-                for (int j = 0; j < StringUtil.getMateResultColdList().size(); j++){
-                    if(fabridNewList.get(i).toLowerCase().contains(StringUtil.getMateResultColdList().get(j))){
-                        System.out.println("COLDCOLD");
+            for (int i = 0; i < fabridNewList.size(); i++) {
+                for (int j = 0; j < StringUtil.getMateResultColdList().size(); j++) {
+                    if (fabridNewList.get(i).toLowerCase().contains(StringUtil.getMateResultColdList().get(j))) {
                         season.add("COLD WEATHER");
                     }
                 }
@@ -119,6 +105,7 @@ public class MaterialRepository {
         }
         return season;
     }
+
     public List<String> getMaterialInfoForSeason(ProductEntity productEntity, String appear) {
         List<String> season = new ArrayList<>();
 
@@ -136,17 +123,17 @@ public class MaterialRepository {
                     || productEntity.getCategoryByCategoryId().getId() == 12
                     || productEntity.getCategoryByCategoryId().getId() == 14) {
                 season.add("HOT WEATHER");
-            }else if (productEntity.getProductName().toLowerCase().contains("WOOL")
+            } else if (productEntity.getProductName().toLowerCase().contains("WOOL")
                     || productEntity.getProductName().toLowerCase().contains("chino")
                     || productEntity.getProductName().contains("UV PROTECTION")
                     || productEntity.getProductName().toLowerCase().contains("kando shorts")
                     || productEntity.getProductName().toLowerCase().contains("short-sleeve")
                     || productEntity.getProductName().toLowerCase().contains("tank")) {
                 season.add("HOT WEATHER");
-            }else if (appear.toLowerCase().contains("absorbs moisture") || appear.toLowerCase().contains("easily absorbs")) {
+            } else if (appear.toLowerCase().contains("absorbs moisture") || appear.toLowerCase().contains("easily absorbs")) {
                 season.add("HOT WEATHER");
             }
-            if(!productEntity.getProductName().toLowerCase().contains("tank")) {
+            if (!productEntity.getProductName().toLowerCase().contains("tank")) {
                 if (productEntity.getMaterial().toLowerCase().contains("leather")
                         || productEntity.getMaterial().toLowerCase().contains("100% polyester")
                         || productEntity.getCategoryByCategoryId().getId() == 2
