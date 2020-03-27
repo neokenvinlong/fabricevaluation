@@ -29,6 +29,12 @@
                     </div>
                 </form>
             </li>
+            <li class="textWeather">
+                <a href="SeasonServlet">Hot Weather</a>
+            </li>
+            <li class="textWeather">
+                <a href="SeasonsServlet">Cold Weather</a>
+            </li>
         </ul>
         <c:set var="result" value="${requestScope.CATEGORYLIST}"/>
         <c:forEach var="dto" items="${result}" varStatus="counter">

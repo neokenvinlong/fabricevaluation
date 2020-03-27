@@ -106,6 +106,107 @@ public class MaterialRepository {
         return season;
     }
 
+    public List<ProductEntity> getMaterialAnalystForHotSeason(ProductEntity productEntity) {
+        List<ProductEntity> season = new ArrayList<>();
+        AnalysisRepository analysisRepository = new AnalysisRepository();
+        List<AnalysisEntity> analysisEntityList;
+        if (!productEntity.getProductName().toLowerCase().contains("backpack")
+                && !productEntity.getProductName().toLowerCase().contains("bag")
+                && !productEntity.getProductName().toLowerCase().contains("hat")
+                && !productEntity.getProductName().toLowerCase().contains("briefs")
+                && !productEntity.getProductName().toLowerCase().contains("cap")) {
+            analysisEntityList = analysisRepository.getAnalysisInMaterial(productEntity);
+//            System.out.println("Info :" + productEntity.getMaterial());
+            List<Integer> percentList = new ArrayList<>();
+            List<String> fabridList = new ArrayList<>();
+            List<String> fabridNewList = new ArrayList<>();
+            int percentage = 0;
+//            System.out.println("size la " + analysisEntityList.size());
+            for (int i = 0; i < analysisEntityList.size(); i++) {
+                if (percentage < 100) {
+                    percentList.add(analysisEntityList.get(i).getPercentage());
+                    fabridList.add(analysisEntityList.get(i).getFabridName());
+                    percentage = percentage + analysisEntityList.get(i).getPercentage();
+                } else {
+                    break;
+                }
+            }
+
+            //compare percentage
+            if (percentList.size() == 1) {
+                fabridNewList.add(fabridList.get(0));
+            } else {
+                if (percentList.get(0) - percentList.get(1) <= 20) {
+                    fabridNewList.add(fabridList.get(0));
+                    fabridNewList.add(fabridList.get(1));
+                } else if (percentList.get(0) - percentList.get(1) > 20) {
+                    fabridNewList.add(fabridList.get(0));
+                }
+            }
+
+            for (int i = 0; i < fabridNewList.size(); i++) {
+                for (int j = 0; j < StringUtil.getMateResultHotList().size(); j++) {
+                    if (fabridNewList.get(i).toLowerCase().contains(StringUtil.getMateResultHotList().get(j))) {
+                        season.add(productEntity);
+                    }
+                }
+            }
+
+        }
+        return season;
+    }
+
+    public List<ProductEntity> getMaterialAnalystForColdSeason(ProductEntity productEntity) {
+        List<ProductEntity> season = new ArrayList<>();
+        AnalysisRepository analysisRepository = new AnalysisRepository();
+        List<AnalysisEntity> analysisEntityList;
+        if (!productEntity.getProductName().toLowerCase().contains("backpack")
+                && !productEntity.getProductName().toLowerCase().contains("bag")
+                && !productEntity.getProductName().toLowerCase().contains("hat")
+                && !productEntity.getProductName().toLowerCase().contains("briefs")
+                && !productEntity.getProductName().toLowerCase().contains("cap")) {
+            analysisEntityList = analysisRepository.getAnalysisInMaterial(productEntity);
+//            System.out.println("Info :" + productEntity.getMaterial());
+            List<Integer> percentList = new ArrayList<>();
+            List<String> fabridList = new ArrayList<>();
+            List<String> fabridNewList = new ArrayList<>();
+            int percentage = 0;
+//            System.out.println("size la " + analysisEntityList.size());
+            for (int i = 0; i < analysisEntityList.size(); i++) {
+                if (percentage < 100) {
+                    percentList.add(analysisEntityList.get(i).getPercentage());
+                    fabridList.add(analysisEntityList.get(i).getFabridName());
+                    percentage = percentage + analysisEntityList.get(i).getPercentage();
+                } else {
+                    break;
+                }
+            }
+
+            //compare percentage
+            if (percentList.size() == 1) {
+                fabridNewList.add(fabridList.get(0));
+            } else {
+                if (percentList.get(0) - percentList.get(1) <= 20) {
+                    fabridNewList.add(fabridList.get(0));
+                    fabridNewList.add(fabridList.get(1));
+                } else if (percentList.get(0) - percentList.get(1) > 20) {
+                    fabridNewList.add(fabridList.get(0));
+                }
+            }
+
+
+            for (int i = 0; i < fabridNewList.size(); i++) {
+                for (int j = 0; j < StringUtil.getMateResultColdList().size(); j++) {
+                    if (fabridNewList.get(i).toLowerCase().contains(StringUtil.getMateResultColdList().get(j))) {
+                        season.add(productEntity);
+                    }
+                }
+            }
+
+        }
+        return season;
+    }
+
     public List<String> getMaterialInfoForSeason(ProductEntity productEntity, String appear) {
         List<String> season = new ArrayList<>();
 
